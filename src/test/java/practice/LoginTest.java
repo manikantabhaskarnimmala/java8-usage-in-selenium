@@ -2,6 +2,7 @@ package practice;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest {
@@ -12,7 +13,8 @@ public class LoginTest {
 
 		driver.get("https://www.google.com");
 
-		System.out.println(driver.getTitle());
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Google");
 
 		driver.quit();
 	}
