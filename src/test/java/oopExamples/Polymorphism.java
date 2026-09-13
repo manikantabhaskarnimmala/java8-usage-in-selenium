@@ -3,7 +3,8 @@ package oopExamples;
 /*
  * Polymorphism means one reference can represent different forms of objects. 
  * Here, the Browser reference points to a Chrome object first and a Firefox object later. 
- * Both child classes override the launch() method. At runtime, Java decides which implementation to execute based on the actual object.
+ * Both child classes override the launch() method from parent Browser class. 
+ * At runtime, Java decides which implementation to execute based on the actual object.
  */
 
 class Browser {
@@ -37,7 +38,7 @@ public class Polymorphism {
 		driver = new Chrome(); // Runtime Polymorphism
 		driver.launch();
 
-		driver = new Firefox();
+		driver = new Firefox(); // Runtime Polymorphism
 		driver.launch();
 
 	}
