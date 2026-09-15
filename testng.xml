@@ -3,7 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="SeleniumJava8.Java8inSelenium.AppTest"/>
+      <class name="tests.demoWebsite.BasicTest"/>
+      <class name="tests.demoWebsite.HomePageTest1"/>
+      <class name="practice.LoginTest"/>
+      <class name="base.BaseClass"/>
+      <class name="tests.demoWebsite.HemoPageTest2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
