@@ -90,7 +90,7 @@ public class HomePage {
 		select.selectByVisibleText(option);
 	}
 
-	// returns just books name
+	// returns  books name
 	public List<String> getBookNames() {
 		return bookNames.stream().map(WebElement::getText).collect(Collectors.toList());
 	}
