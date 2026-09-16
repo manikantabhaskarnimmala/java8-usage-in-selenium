@@ -3,11 +3,10 @@ package tests.sauceDemo;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import baseTest.BaseTest;
 import pages.sauceDemo.HomePage;
 import pages.sauceDemo.LoginPage;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends BasePageTest {
 
 	@Test(testName = "validLoginTest")
 	public void validLogin() {

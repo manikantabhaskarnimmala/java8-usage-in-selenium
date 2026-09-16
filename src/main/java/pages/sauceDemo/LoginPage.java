@@ -36,26 +36,21 @@ public class LoginPage extends BasePage {
 
 	// Enter username
 	public void setUsername(String user) {
-		wait.until(ExpectedConditions.visibilityOf(loginPH));
-		loginPH.sendKeys(user);
+		enterText(loginPH, user);
 	}
 
 	// Enter password
 	public void setPassword(String pass) {
-		wait.until(ExpectedConditions.visibilityOf(passwordPH));
-		passwordPH.sendKeys(pass);
-	}
+		enterText(passwordPH, pass);	}
 
 	// Click login
 	public void clickLoginButton() {
-		wait.until(ExpectedConditions.visibilityOf(loginButton));
-		loginButton.click();
+		click(loginButton);
 	}
 
 	// grab error message text
 	public String getErrorMessage() {
-		wait.until(ExpectedConditions.visibilityOf(errorMsg));
-		return errorMsg.getText();
+		return getText(errorMsg);
 	}
 
 }
