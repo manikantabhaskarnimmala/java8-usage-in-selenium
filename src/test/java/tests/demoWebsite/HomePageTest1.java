@@ -1,12 +1,11 @@
 package tests.demoWebsite;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import base.BaseClass;
+import baseTest.BaseTest;
 import pages.demoWebsite.HomePage;
 
-public class HomePageTest1 extends BaseClass {
+public class HomePageTest1 extends BaseTest {
 
 	@Test
 	public void printTextFromlinks() {

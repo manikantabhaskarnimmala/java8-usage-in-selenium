@@ -2,10 +2,10 @@ package tests.demoWebsite;
 
 import org.testng.annotations.Test;
 
-import base.BaseClass;
+import baseTest.BaseTest;
 import pages.demoWebsite.HomePage;
 
-public class BasicTest extends BaseClass {
+public class BasicTest extends BaseTest {
 
 	@Test
 	public void clickLoginBtn() throws InterruptedException {

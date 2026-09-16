@@ -1,6 +1,5 @@
 package pages.demoWebsite;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,20 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage {
+import base.BasePage;
 
-	protected WebDriver driver;
-	protected WebDriverWait wait;
+public class HomePage extends BasePage {
 
 	// constructor
 	public HomePage(WebDriver driver) {
-		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 
 	// Locators
@@ -75,22 +70,22 @@ public class HomePage {
 
 	// returns books count
 	public int getBooksSize() {
-	    return bookNames.size();
+		return bookNames.size();
 	}
 
 	// returns dropdown element
 	public void selectSortOption(String option) {
-		
-		//with out java 8 
-		//wait.until(ExpectedConditions.visibilityOf(dropdown));
-		
-		//with Java 8
+
+		// with out java 8
+		// wait.until(ExpectedConditions.visibilityOf(dropdown));
+
+		// with Java 8
 		wait.until(driver -> dropdown.isDisplayed());
 		Select select = new Select(dropdown);
 		select.selectByVisibleText(option);
 	}
 
-	// returns  books name
+	// returns books name
 	public List<String> getBookNames() {
 		return bookNames.stream().map(WebElement::getText).collect(Collectors.toList());
 	}

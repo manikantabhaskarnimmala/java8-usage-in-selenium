@@ -1,4 +1,4 @@
-package base;
+package baseTest;
 
 import java.time.Duration;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseClass {
+public class BaseTest {
 	protected WebDriver driver;
 
 	@BeforeClass
@@ -16,10 +16,11 @@ public class BaseClass {
 
 		ChromeOptions options = new ChromeOptions();
 		// Run Chrome without opening the browser window
-		options.addArguments("--headless=new");
+		//options.addArguments("--headless=new");
 
 		// Launch browser
-		driver = new ChromeDriver(options);
+		//driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 
 		// Maximize browser
 		driver.manage().window().maximize();
@@ -29,7 +30,9 @@ public class BaseClass {
 
 		// Navigate to application
 		// for demo website
-		driver.get("https://demowebshop.tricentis.com/");
+		//driver.get("https://demowebshop.tricentis.com/");
+		// for saucedemo
+		driver.get("https://www.saucedemo.com/");
 	}
 
 	@AfterClass

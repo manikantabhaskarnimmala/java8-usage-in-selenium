@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import base.BaseClass;
+import baseTest.BaseTest;
 import pages.demoWebsite.HomePage;
 
-public class HomePageTest2 extends BaseClass {
+public class HomePageTest2 extends BaseTest {
 
 	@Test
 	public void getBooksSize() {
