@@ -1,5 +1,7 @@
 package oopExamples;
 
+import org.openqa.selenium.remote.Browser;
+
 /*
  * Polymorphism means one reference can represent different forms of objects. 
  * Here, the Browser reference points to a Chrome object first and a Firefox object later. 
@@ -7,25 +9,23 @@ package oopExamples;
  * At runtime, Java decides which implementation to execute based on the actual object.
  */
 
-class Browser {
+interface WebDriver1 {
 
-	void launch() {
-		System.out.println("Launching browser");
-	}
+	void launch();
 }
 
-class Chrome extends Browser {
+class Chrome implements WebDriver1 {
 
 	@Override
-	void launch() {
+	public void launch() {
 		System.out.println("Launching Chrome");
 	}
 }
 
-class Firefox extends Browser {
+class Firefox implements WebDriver1 {
 
 	@Override
-	void launch() {
+	public void launch() {
 		System.out.println("Launching Firefox");
 	}
 }
@@ -34,7 +34,7 @@ public class Polymorphism {
 
 	public static void main(String[] args) {
 
-		Browser driver;
+		WebDriver1 driver;
 		driver = new Chrome(); // Runtime Polymorphism
 		driver.launch();
 

@@ -20,9 +20,6 @@ public class BasePageTest {
 		// Maximize browser
 		driver.manage().window().maximize();
 
-		// Implicit wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
 		// for saucedemo
 		driver.get("https://www.saucedemo.com/");
 	}

@@ -183,7 +183,7 @@ public class ProductsTest extends BasePageTest {
 		Double price= 29.99;
 		Assert.assertEquals(pdp.getItemPrice(), price);	
 		log.info("exact price is displayed");
-		Assert.assertTrue(pdp.isAddToCartButtonDisplayed(), "Add ToCart button is enabled");
+		Assert.assertTrue(pdp.isAddToCartButtonDisplayed(), "Add ToCart button is not enabled");
 		log.info("Add to cart button is also displayed");
 		
 		log.info("Verify Products Details validation is passed");
